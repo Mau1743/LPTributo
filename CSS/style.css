@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Spline+Sans:wght@700&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oooh+Baby&family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@700&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Odibee+Sans&family=Spline+Sans:wght@700&family=Square+Peg&display=swap');
+@font-face {
+    font-family: "LinkinPark";
+    src: url("/CSS/LinkinPark.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	background-image: url(/img/Fondo_body.jpg);
+	background-position:15% 15%;
+	background-size: 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+}
+
+.div-header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+.content{
+    font-family: LinkinPark;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 500ms ease;
+}
+
+
+.bar-btn{
+    font-size: 25px;
+    color: yellow;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5%;
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5%;
+}
+
+.nav-menu li a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600px;
+}       
+
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgb(248, 0, 0);
+    transition: .3%;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+.logo{
+    width: 80px;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 160px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+.content h1:hover{
+    font-size: 130px;
+    color: yellow;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.content a:hover{
+    text-decoration: none;
+    display: inline-block;
+    color: red;
+    font-size: 30px;
+    border: 2px solid red;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: all 500ms ease;
+}
+
+.bg-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+}
+
+#Secciones-content{
+    width: 100%;
+    font-size: 45px;
+    font-family: 'Dosis', sans-serif;
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.Secciones-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+    
+.Secciones-imagen{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.Secciones-imagen > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Hover-secciones{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(0, 0, 0, 0.418);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+}
+
+.Hover-secciones img{
+    width: 50px;
+}
+
+.Secciones-imagen:hover .Hover-secciones{
+    transform: scale(1);
+}
+
+#LP-content{
+    background-color: black;
+    opacity: 90%;
+}
+
+
+.LP-texto{
+	color: white;
+	padding-top: 3%;
+    width:90%;
+    padding-left:10%;
+    padding-bottom: 10%;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 25px;
+}
+
+.Frase{
+    background-image: url(/img/Frase.jpg);
+    background-size: cover;
+    min-height: 500px;
+    font-size: 40px; opacity: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 100px;
+    font-family: 'Square Peg', cursive;
+    color: #fff;
+}
+
+.logoLP{
+	margin: 40px;
+    width: 80px;
+    
+}
+
+.Frase2{
+    background-image: url(/img/Frase2.jpg);
+    background-size: cover;
+    min-height: 500px;
+    font-size: 80px; opacity: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 100px;
+    font-family: 'Square Peg', cursive;
+    color: #fff;
+}
+
+#Chester-content{
+    background-color: black;
+    opacity: 90%;
+}
+
+footer{
+    background-color: #000B18;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    color: white;
+    opacity: 90%;
+    
+}
+
+.footer_titulo{
+    font-size: 20px;
+    margin-left: 200px;
+
+}
+
+.logo-footer{
+    width: 60px;
+}
+
+
+
+div .Hover-secciones a{
+    color: #fff;
+    border: 2px solid white;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+div .Hover-secciones a:hover{
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.LP-texto p{
+    margin-bottom: 50px;
+    font-display:unset
+}
+
+#contacto{
+    background-color: black; opacity: 90%;
+    color: #fff;
+    width: 1878px;
+
+
+}
+
+#mensajeContacto{
+    height: 100px;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .bg-video{
+        bottom: 50;
+        left: 400;
+    }
+
+    .content h1{
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    body{
+        background-image: url(/img/Fondo_body.jpg);
+        background-size: cover;
+        width: 900px;
+    }
+
+    .Titulo{
+        height: 400px;
+        padding-top: 200px;
+
+
+    }
+
+    .bg-video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        transform: translateX(-40%) translateY(-50%);
+    }
+
+    #Secciones-content{
+        width: 1602px;
+    }
+
+    .Frase{
+        width: 1602px;
+    }
+
+    #LP-content{
+        width: 1602px;
+    }
+    
+    .Frase2{
+        width: 1602px;
+    }
+
+    .LP-texto{
+        width: 1602px;
+        font-size: 20px;
+    }
+    
+    .LP-texto p{
+        margin-bottom: 50px;
+        margin-right: px;
+        font-display:unset
+    }
+
+    .LP-textos p{
+        line-height: 30px;
+
+    }
+
+    #Chester-content{
+        width: 1602px;
+        background-color: black;
+    }
+
+    footer{
+        background-color: #000B18;
+        height: 150px;
+        width: 1602px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+        color: white;
+        opacity: 90%;
+    }
+
+    .content{
+        display: block;
+    }
+
+    #contacto{
+        width: 1610px;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
